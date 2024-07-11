@@ -1,0 +1,15 @@
+<body>
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li class="nav-item"><a class="navi" routerLink="/patientDashboard/addAppointment" routerLinkActive="active">Add
+          AppointMent</a></li>
+      <li class="nav-item"><a class="navi" routerLink="/patientDashboard/view" routerLinkActive="active">view
+          appointment</a></li>
+      <li class="nav-item"><a class="navi" routerLink="//patientDashboard/cancel"
+          routerLinkActive="active">cancelappointment</a></li>
+      <!-- <li class="nav-item"><a class="navi" routerLink="/AllPatients" routerLinkActive="active">All Patients</a></li> -->
+      <button type="button" (click)="logout()">Logout</button>
+    </ul>
+  </nav>
+  <router-outlet></router-outlet>
+</body>

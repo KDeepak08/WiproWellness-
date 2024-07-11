@@ -1,0 +1,24 @@
+<div class="navbar">
+    <a href="#" class="logo">WiproWellness</a>
+
+    <div class="nav-items">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+
+        <div class="dropdown">
+            <button class="dropbtn">Login
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a class="navi" routerLink="/mainDashboard/doctor" routerLinkActive="active">Doctor</a>
+                <a class="navi" routerLink="/mainDashboard/patient" routerLinkActive="active">Patient</a>
+                <a class="navi" routerLink="/mainDashboard/AdminRegister" routerLinkActive="active">AdminRegister</a>
+                <a class="navi" routerLink="/mainDashboard/adminlogin" routerLinkActive="active">AdminLogin</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<router-outlet></router-outlet>

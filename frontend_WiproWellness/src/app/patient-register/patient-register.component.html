@@ -1,0 +1,43 @@
+<p>patient-register works!</p>
+<div class="container">
+    <h2>Add Patient</h2>
+    <form (ngSubmit)="addPatient()">
+        <div class="form-group">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" [(ngModel)]="patient.fullName" name="fullName" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="dateOfBirth">Date of Birth:</label>
+            <input type="date" id="dateOfBirth" [(ngModel)]="patient.dateOfBirth" name="dateOfBirth" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="contactNumber">Contact Number:</label>
+            <input type="text" id="contactNumber" [(ngModel)]="patient.contactNumber" name="contactNumber" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="symptoms">Symptoms:</label>
+            <textarea id="symptoms" [(ngModel)]="patient.symptoms" name="symptoms" class="form-control" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="patientInformation">Patient Information:</label>
+            <textarea id="patientInformation" [(ngModel)]="patient.patientInformation" name="patientInformation" class="form-control" required></textarea>
+        </div>
+        <div class="form-group"> 
+            <label for="gender">Gender:</label>
+            <select id="gender" [(ngModel)]="patient.gender" name="gender" class="form-control" required>
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" [(ngModel)]="patient.username" name="username" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" [(ngModel)]="patient.password" name="password" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Patient</button>
+    </form>
+</div>

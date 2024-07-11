@@ -1,0 +1,15 @@
+<body>
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li class="nav-item"><a class="navi" routerLink="/adminDashboard/addDoctor1" routerLinkActive="active">Add
+          Doctor</a></li>
+      <li class="nav-item"><a class="navi" routerLink="/adminDashboard/addPatient" routerLinkActive="active">Add
+          Patient</a></li>
+      <li class="nav-item"><a class="navi" routerLink="/adminDashboard/AllDoctors" routerLinkActive="active">All
+          Doctors</a></li>
+      <!-- <li class="nav-item"><a class="navi" routerLink="/AllPatients" routerLinkActive="active">All Patients</a></li> -->
+      <button type="button" (click)="logout()">Logout</button>
+    </ul>
+  </nav>
+  <router-outlet></router-outlet>
+</body>

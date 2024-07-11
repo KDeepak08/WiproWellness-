@@ -1,0 +1,26 @@
+<div class="container">
+    <h2>Doctors</h2>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let doctor of doctors">
+        <div class="doctor-box">
+          <h3>{{ doctor.name }}</h3>
+          <p><strong>Speciality:</strong> {{ doctor.speciality }}</p>
+          <p><strong>Experience:</strong> {{ doctor.experience }}</p>
+          <p><strong>Qualification:</strong> {{ doctor.qualification }}</p>
+          <p><strong>Designation:</strong> {{ doctor.designation }}</p>
+          <p><strong>Role:</strong> {{ doctor.role }}</p>
+          <p><strong>Username:</strong> {{ doctor.username }}</p>
+          <p><strong>Password:</strong> *****</p>
+          <!-- Password should not be displayed in UI for security reasons -->
+          <!-- <p><strong>Patients:</strong></p> -->
+          <ul>
+            <li *ngFor="let patient of doctor.patients">
+              {{ patient.fullName }} - {{ patient.contactNumber }}
+            </li>
+          </ul>
+          <button class="btn btn-primary" (click)="addPatient(doctor.id)">Add Patient</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,20 @@
+<div class="container">
+    <h2>All Appointments for Doctor ID: {{ doctorId }} on {{ date }}</h2>
+    <div class="appointments-list">
+      <div *ngFor="let appointment of appointments" class="appointment-box">
+        <div class="appointment-details">
+          <p><strong>Patient ID:</strong> {{ appointment.patientId }}</p>
+          <p><strong>Doctor Name:</strong> {{ appointment.doctorName }}</p>
+          <p><strong>Date:</strong> {{ appointment.date }}</p>
+          <p><strong>Time:</strong> {{ appointment.time }}</p>
+          <p><strong>Previous Appointment:</strong> {{ appointment.previousAppointment }}</p>
+          <p><strong>Status:</strong> {{ appointment.status }}</p>
+        </div>
+        <div class="appointment-actions">
+          <button (click)="viewAppointment(appointment.patientId)">View</button>
+          <button (click)="cancelAppointment(appointment.patientId)">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
